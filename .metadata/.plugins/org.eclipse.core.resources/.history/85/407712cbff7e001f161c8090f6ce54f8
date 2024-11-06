@@ -1,0 +1,23 @@
+package com.example.domain;
+
+public class Employee {
+public static int nextId =101;
+public int empId ;
+public String name ;
+public String ssn ;
+public double salary ;
+public Employee(String name, String ssn,double salary ) {
+	this.empId= nextId++;
+	this.name =name;
+	this.ssn=ssn;
+	this.salary= salary;
+}
+public void displayInformation() {
+	System.out.println("====員工資訊====");
+	System.out.println("編號:"+this.empId);
+	System.out.println("姓名:"+this.name);
+	System.out.println("SSN:"+this.ssn);
+	System.out.println("薪水:"+this.salary);
+}
+
+}

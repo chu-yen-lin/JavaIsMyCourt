@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+		<section name="NewWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="0"/>
+			<item key="DIALOG_Y_ORIGIN" value="0"/>
+			<item key="DIALOG_WIDTH" value="525"/>
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+		</section>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\eclipse\WorkSpace\springboot-mvc"/>
+			<item value="E:\eclipse\WorkSpace\Servers"/>
+			<item value="E:\eclipse\WorkSpace\javaweb"/>
+			<item value="C:\ECLIPSE\WorkSpace\Servers"/>
+			<item value="C:\ECLIPSE\WorkSpace\javaweb"/>
+			<item value="E:\eclipse\WorkSpace\SimpleJDBCExample"/>
+			<item value="E:\eclipse\WorkSpace\LambdaTest"/>
+			<item value="E:\eclipse\WorkSpace\ConversionS"/>
+			<item value="E:\eclipse\WorkSpace\CaseConversionS"/>
+			<item value="E:\eclipse\WorkSpace\CaseConversion"/>
+			<item value="E:\eclipse\WorkSpace\GenericsPracticeS"/>
+			<item value="E:\eclipse\WorkSpace"/>
+			<item value="E:\eclipse\WorkSpace\GenericsPractice"/>
+			<item value="E:\eclipse\WorkSpace\CarCompany"/>
+			<item value="E:\eclipse\WorkSpace\ExceptionPractice"/>
+			<item value="E:\eclipse\WorkSpace\EmployeeDAO"/>
+			<item value="E:\eclipse\WorkSpace\EmployeePractice108"/>
+			<item value="E:\eclipse\WorkSpace\EmployeePractice"/>
+			<item value="E:\eclipse\WorkSpace\EmployeePractice1008"/>
+			<item value="C:\Users\NTPU\Downloads\EmployeePractice"/>
+			<item value="E:\eclipse\WorkSpace\Pet"/>
+		</list>
+		<section name="SmartImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="79"/>
+			<item key="DIALOG_Y_ORIGIN" value="41"/>
+			<item key="DIALOG_WIDTH" value="897"/>
+			<item key="DIALOG_HEIGHT" value="629"/>
+			<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+		</section>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="389"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+</section>

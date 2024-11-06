@@ -1,0 +1,43 @@
+package com.example.dao;
+
+import com.example.model.Employee;
+
+public class EmployeeDAOMapImpl implements EmployeeDAO {
+
+	@Override
+	public void close() throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void add(Employee emp) throws DAOException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(Employee emp) throws DAOException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int id) throws DAOException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Employee findById(int id) throws DAOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee[] getAllEmployees() throws DAOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

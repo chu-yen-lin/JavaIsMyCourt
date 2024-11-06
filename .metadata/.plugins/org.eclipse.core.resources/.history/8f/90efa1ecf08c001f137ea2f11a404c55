@@ -1,0 +1,65 @@
+package com.example.dao;
+
+import java.util.*;
+import java.text.*;
+import com.example.model.Employee;
+
+public class EmployeeDAOFileImpltwo implements EmployeeDAO {
+    private Map<Integer, Employee> employees;
+	private String fileName;
+	private SimpleDateFormat d = new SimpleDateFormat("MMM d, yyyy", Locale.US);
+	public EmployeeDAOFileImpltwo(String fileName) {
+		super();
+		this.employees = new TreeMap<>();
+		this.fileName= fileName;
+	}
+	
+	
+		
+		
+	}
+	
+	@Override
+	public void add(Employee emp) throws DAOException {
+		int id = emp.getId();
+		if(employees.containsKey(id))
+			throw new DAOException(id+"號員工已存在不能新增");
+		employees.put(id, emp);
+		
+		}
+
+	
+
+	@Override
+	public void update(Employee emp) throws DAOException {
+		int id=emp.getId();
+		if(!employees.containsKey(id))
+			throw new DAOException(id+"號員工不存在不能修改");
+			employees.put(id, emp);
+	}
+
+	@Override
+	public void delete(int id)  {
+		employees.remove(id);
+
+	}
+
+	@Override
+	public Employee findById(int id) {
+		// TODO Auto-generated method stub
+		return employees.get(id);
+	}
+
+	@Override
+	public Employee[] getAllEmployees()  {
+		// TODO Auto-generated method stub
+		Collection<Employee> emps = employees.values();
+		return emps.toArray(new Employee[emps.size()]);
+	}
+	
+	public void close() throws Exception {
+		System.out.println("關閉資源....");
+
+	}
+
+}

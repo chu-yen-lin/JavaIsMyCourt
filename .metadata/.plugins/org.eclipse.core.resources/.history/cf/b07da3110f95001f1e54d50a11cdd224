@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首頁</title>
+	</head>
+	<body>
+		Hello Java Web
+		<ol>
+			<li><a href="/javaweb/lotto">LottoServlet</a></li>
+		</ol>
+	</body>
+</html>

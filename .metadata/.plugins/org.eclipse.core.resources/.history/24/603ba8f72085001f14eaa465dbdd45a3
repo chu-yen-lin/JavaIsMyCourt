@@ -1,0 +1,39 @@
+package com.example.domain;
+
+public class Director extends Manager {
+	private double budget;	
+	private double baseBonus = 500000;
+	
+public Director(String name, String ssn, double salary, String deptName, double budget) {
+	super(name, ssn, salary, deptName);
+	this.budget = budget;
+}
+
+public double getBudget() {
+	return budget;
+}
+public double getBonus() {
+	
+}
+
+@Override
+public void displayInformation() {
+	// TODO Auto-generated method stub
+	super.displayInformation();
+	System.out.println("預算:" + this.formatter.format(budget));
+}
+
+
+}
+
+
+
+
+
+
+
+
+	
+
+
+

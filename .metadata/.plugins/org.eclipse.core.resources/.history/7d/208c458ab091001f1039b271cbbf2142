@@ -1,0 +1,21 @@
+package javaweb.servlet;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class LottoServlet
+ */
+@WebServlet("/LottoServlet")
+public class LottoServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LottoServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+}

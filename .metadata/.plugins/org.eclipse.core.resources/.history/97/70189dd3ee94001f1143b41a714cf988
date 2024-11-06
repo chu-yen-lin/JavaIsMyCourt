@@ -1,0 +1,31 @@
+package javaweb1.servlet;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
+
+@WebServlet("/score")
+public class ScoreServlet extends HttpServlet{
+
+	
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
+		String[]scores = req.getParameterValues("score");
+		resp.getWriter().println("scores: "+ Arrays.toString(scores));
+		int[] intScores = Arrays.stream(scores).mapToInt(Integer::parseInt).toArray();
+		IntSummaryStatistics stat = Arrays.stream(intScores).summaryStatistics();
+		resp.getWriter().print("scores: " +  Arrays.toString(scores));
+		resp.getWriter().print("sum: " +  stat.getSum());
+		resp.getWriter().print("avg: " +  String.format("%.1f", stat.getAverage()));
+		resp.getWriter().print("max: " +  stat.getMax());
+		resp.getWriter().print("min: " +  stat.getMin());
+		resp.getWriter().print("count: " +  stat.getCount());
+	}
+}

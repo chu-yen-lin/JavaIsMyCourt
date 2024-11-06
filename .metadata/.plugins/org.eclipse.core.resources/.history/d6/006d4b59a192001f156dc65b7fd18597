@@ -1,0 +1,55 @@
+package javaweb.servlet;
+
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.SecureRandom;
+import java.util.Base64;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/hash")
+public class HashServlet extends HttpServlet {
+
+	
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException {
+		String password = req.getParameter("password");
+		String hash = getHash(password);
+		resp.getWriter().println("hash: "+ hash);
+		String salt = getSalt();
+		resp.getWriter().println("salt: " + salt);
+		String hashSalt = getHash(password, salt);
+		resp.getWriter().println("hashSalt: " + hashSalt);
+	}
+	
+	private String getHash(String passsword, String salt) {
+		try {
+			MessageDigest md = MessageDigest.getInstance("SHA-256");
+			md.update(salt.getBytes());
+			byte[]bytes = md.digest(password.getBytes());
+			return Base64.getEncoder().encodeToString(bytes);
+		}catch (Exception e) {
+			e.printStackTrace();
+	} return null;}
+	private String getSalt() {
+		SecureRandom secureRandom = new SecureRandom();
+		byte[] salt = new byte[16];
+		secureRandom.nextBytes(salt);
+		return Base64.getEncoder().encodeToString(bytes); 
+		return "1234ABC";
+	}
+	
+	private String getHash(String password) {
+		try {
+			MessageDigest md = MessageDigest.getInstance("SHA-256");
+			byte[]bytes = md.digest(password.getBytes());
+			return Base64.getEncoder().encodeToString(bytes);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+}
