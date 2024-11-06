@@ -1,0 +1,11 @@
+package com.example.domain;
+
+public class Admin extends Employee {
+	private int hours;
+	
+
+	public Admin(String name, String ssn, double salary) {
+		super(name, ssn, salary);
+	}
+
+}

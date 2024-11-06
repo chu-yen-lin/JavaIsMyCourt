@@ -1,0 +1,8 @@
+package javaweb.servlet;
+
+import jakarta.servlet.annotation.WebServlet;
+
+@WebServlet("/cart")
+public class CartServlet {
+
+}

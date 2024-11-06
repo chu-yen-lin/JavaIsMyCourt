@@ -1,0 +1,38 @@
+package javaweb.servlet;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+
+public class FruitCRUDServlet extends HttpServlet{
+private List<String> fruits = new CopyOnWriteArrayList<>();
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		
+		String name = req.getParameter("name");
+		String newName = req.getParameter("newName");
+		String pathInfo = req.getPathInfo();
+		switch(pathInfo) {
+		case"/create":
+			fruits.add(name);
+			resp.getWriter().print("Create fruit OK");
+			break;
+		case"/read":
+			resp.getWriter().print(fruits);
+		
+			break;
+		case"/update":
+			int idx = fruits.indexOf(name);
+			fruits.set(idx, newName);
+			resp.getWriter().print("Update fruit OK");
+			break;
+		case"/delete":
+			fruits.remove(name);
+			resp.getWriter().print("Delete fruit OK");
+			break;
+		}
+	}
+}

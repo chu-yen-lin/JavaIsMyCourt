@@ -1,0 +1,55 @@
+package com.example.dao;
+
+import java.util.Map;
+
+import com.example.model.Employee;
+
+public class EmployeeDAOMapImpl implements EmployeeDAO {
+    private Map<Integer, Employee> employees;
+	@Override
+	public void close() throws Exception {
+		System.out.println("關閉資源....");
+
+	}
+
+	public EmployeeDAOMapImpl(Map<Integer, Employee> employees) {
+		super();
+		this.employees = employees;
+	}
+
+	@Override
+	public void add(Employee emp) throws DAOException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(Employee emp) throws DAOException {
+		int id = emp.getId();
+		try {
+		if(employees.containsKey(id))
+			throw new DAOException(id+"號員工已存在不能新增");
+		employees.put(id,emp);
+		}catch(ArrayIndexOutOfBoundsException ex) {
+			throw new DAOException("員工編號需小於10, ex");
+	}
+
+	@Override
+	public void delete(int id) throws DAOException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Employee findById(int id) throws DAOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee[] getAllEmployees() throws DAOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

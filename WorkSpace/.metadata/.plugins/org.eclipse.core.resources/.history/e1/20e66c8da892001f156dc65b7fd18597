@@ -1,0 +1,29 @@
+package javaweb.servlet;
+
+import java.io.IOException;
+import java.util.concurrent.ConcurrentHashMap;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/hash/compare")
+public class HashCompareServlet extends HttpServlet {
+private static Map<String, String> users = new ConcurrentHashMap<>();
+static {
+	users.put("john", "A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=");
+	users.put("amy", "+GOLl5svT3k92229GX4O4lp6bqMrCuIvXjxdEZ2DnnU=");
+}
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

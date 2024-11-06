@@ -1,0 +1,35 @@
+package javaweb.servlet;
+
+import java.io.IOException;
+import java.net.http.HttpResponse;
+
+import jakarta.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class DemoServlet extends HttpServlet {
+
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+	String uri = req.getRequestURL();
+	String url = req.getRequestURL().toString();
+	int port = req.getServerPort();
+	String contextPath = req.getContextPath();
+	String servletPath = req.getServletPath();
+	String pathInfo = req.getPathInfo();
+	
+	resp.getWriter().println("uri: "+ uri);
+	resp.getWriter().println("url: "+ url);
+	resp.getWriter().println("port: "+ port);
+	resp.getWriter().println("contextPath: "+ contextPath);
+	resp.getWriter().println("ServletPath: "+ servletPath);
+	resp.getWriter().println("pathInfo: "+ pathInfo);
+}
+	
+	
+	
+	
+	
+	
+}

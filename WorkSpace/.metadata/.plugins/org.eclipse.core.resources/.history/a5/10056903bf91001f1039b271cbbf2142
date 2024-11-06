@@ -1,0 +1,37 @@
+package javaweb.servlet;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class BMIServlet
+ */
+@WebServlet("/bmi")
+public class BMIServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		double height = 170;
+		double weight = 10;
+		double bmi = weight/ Math.pow(height/100, 2);
+		req.setAttribute("height", height);
+		req.setAttribute("weight", weight);
+		req.setAttribute("bmi", bmi);
+		req.getRequestDispatcher("/WEB-INF/view/bmi.jsp").forward(req, resp);
+	}
+	
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    
+        // TODO Auto-generated constructor stub
+    
+
+}

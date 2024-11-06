@@ -1,0 +1,18 @@
+package javaweb.servlet;
+
+import java.io.IOException;
+import java.util.Arrays;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class ScoreServlet extends HttpServlet{
+
+	
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
+		String[]scores = req.getParameterValues("score");
+		resp.getWriter().println("scores: "+ Arrays.toString(scores));
+	}
+}

@@ -1,0 +1,5 @@
+package javaweb.exception;
+
+public class PasswordInvalidException {
+
+}

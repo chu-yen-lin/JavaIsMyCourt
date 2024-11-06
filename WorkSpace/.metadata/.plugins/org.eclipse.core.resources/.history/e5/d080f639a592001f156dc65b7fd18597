@@ -1,0 +1,5 @@
+package javaweb.utils;
+
+public class Hash {
+
+}

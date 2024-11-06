@@ -1,0 +1,11 @@
+package javaweb.repository;
+
+import java.util.List;
+import java.util.Map;
+
+import javaweb.model.entity.Product;
+
+public interface ProductDao {
+	List<Product> findAllProducts();
+	List<Map<String, Double>>querySalesRanking();
+}

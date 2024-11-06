@@ -1,0 +1,16 @@
+package com.example;
+
+import com.example.domain.Employee;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		Employee emp1 = new Employee("Sam", "F222244333", 50000);
+		emp1.displayInformation();
+		Employee emp2 = new Employee("ppp", "F3222444333", 60000);
+		emp2.displayInformation();
+		// TODO Auto-generated method stub
+
+	}
+
+}

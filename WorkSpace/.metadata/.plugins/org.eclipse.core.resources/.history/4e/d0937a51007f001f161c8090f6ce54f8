@@ -1,0 +1,53 @@
+package com.example.domain;
+
+public class Employee {
+	private static int nextId = 101;
+	private int empId;
+	private String name="derrick rose";
+	private String ssn="A123456789";
+	private double salary=27490;
+public Employee(String name, String ssn,double salary ) {
+	this.empId= nextId++;
+	if(name!=null&& name.trim().length()!=0)
+	this.name =name;
+	if(ssn!=null&& ssn.trim().length()>0)
+	this.ssn=ssn;
+	if(salary>27490)
+	this.salary= salary;
+}
+public int getEmpId() {
+	return this.empId;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	if(name!=null&& name.trim().length()!=0)
+	this.name = name;
+}
+
+public String getSsn() {
+	return ssn;
+}
+
+public double getSalary() {
+	return salary;
+}
+
+
+
+public void setEmpId(int empId) {
+	this.empId = empId;
+}
+
+public void displayInformation() {
+	System.out.println("====員工資訊====");
+	System.out.println("編號:" + this.empId);
+	System.out.println("姓名:" + this.name);
+	System.out.println("SSN:" + this.ssn);
+	System.out.println("薪水:" + this.salary);
+}
+
+}

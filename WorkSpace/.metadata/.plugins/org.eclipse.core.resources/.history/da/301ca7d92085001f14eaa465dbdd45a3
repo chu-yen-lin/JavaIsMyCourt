@@ -1,0 +1,47 @@
+package com.example;
+
+import com.example.domain.Employee;
+import com.example.domain.Engineer;
+import com.example.domain.Manager;
+import com.example.domain.Director;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		Employee[]emps = new Employee[5];
+		emps[0]  = new Employee("Sam", "F222244333", 50000);
+		emps[1]  = new Admin("null", "F388924333", 80000);
+		emps[2]  = new Engineer("Davvvid", "C123444587", 100000);
+		emps[3] = new Manager("LOUISA", "D225444879", 70000, "Rentacar");
+		emps[4] = new Director("nikkod", "S457896611", 44000, "PONY", 560000);
+		
+		
+		for(int i=0; i<emps.length;i++)
+			System.out.println(emps[i]);
+		
+		
+		// TODO Auto-generated method stub
+System.out.println("\nDavvvid學會Java, 加薪1000元");
+if(emps[2] instanceof Engineer) {
+	((Engineer) emps[2]).addSkill("Java");
+	((Engineer) emps[2]).addSkill("Android");
+	((Engineer) emps[2]).addSkill("f");
+	((Engineer) emps[2]).addSkill("ios");
+	((Engineer) emps[2]).addSkill("drivelicense");
+	((Engineer) emps[2]).addSkill("drse");
+}
+
+System.out.println("部門分配...\n");
+if(emps[3]instanceof Manager) {
+	Manager m1 = (Manager)emps[3];
+	m1.addEmployee(emps[0]);
+	m1.addEmployee(emps[1]);
+	m1.addEmployee(emps[2]);
+}
+((Manager)emps[4]).addEmployee(emps[3]);
+for(int i=0; i<emps.length; i++)
+System.out.println(emps[i]);
+
+	}
+
+}
